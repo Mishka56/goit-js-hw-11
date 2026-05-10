@@ -5,12 +5,12 @@ import "izitoast/dist/css/iziToast.min.css";
 import { getImagesByQuery } from './js/pixabay-api.js';
 import { createGallery, clearGallery, showLoader, hideLoader } from './js/render-functions.js';
 
-const searchForm = document.querySelector('.form');
+const searchForm = document.querySelector('#search-form');
 
 searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
   
-  const query = event.currentTarget.elements['search-text'].value.trim();
+  const query = event.currentTarget.elements.search-text.value.trim();
 
   if (query === "") {
     iziToast.warning({
